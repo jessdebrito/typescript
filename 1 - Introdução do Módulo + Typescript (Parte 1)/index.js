@@ -1,4 +1,4 @@
-const firstName = "Jéssica";
+/* const firstName = "Jéssica";
 const petName = "Blue";
 
 function sum(a,b) {
@@ -6,4 +6,4 @@ function sum(a,b) {
 };
 
 sum(firstName, petName);
-/* marcador de erro não existente */
+/* marcador de erro não existente */ 
