@@ -19,8 +19,22 @@ let firstName6 = true;  // certo!
 // DEVEMOS  apontar tipos para os parâmetros das nossas funções. exemplo:
  function sub(a: number, b: number){
     return a - b;
- }
+ };
 
  function sayMyName(name: string){
     console.log(name);
- }
+ };
+
+ // PODEMOS apontar o tipo, mas é opcional
+
+ function sub2(a: number, b: number): number{
+    return a - b;
+ };
+
+// Listas (arrays)
+// []
+// Poremos apontar tipo em listar que temos valores preenchidos(Opcional)
+let nameList: string[] = ["Jéssica", "Amaro", "Patricia", "Victor"];
+
+// DEVEMOS apontar tipo em listas vazias. Exempli do typescript falhando em idenficiar o tipo:
+let petList = [];
