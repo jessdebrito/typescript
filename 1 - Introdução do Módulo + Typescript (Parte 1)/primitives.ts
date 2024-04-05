@@ -38,3 +38,21 @@ let nameList: string[] = ["Jéssica", "Amaro", "Patricia", "Victor"];
 
 // DEVEMOS apontar tipo em listas vazias. Exempli do typescript falhando em idenficiar o tipo:
 let petList = [];
+let priceList: number[] = [];
+
+nameList.forEach((name) => {
+    console.log(name);
+});
+
+function printAllNames (nameList: string[]){
+    nameList.length;
+}
+
+priceList.push(123);
+
+// Union type = às vezes tem um tpo, às vezes tem outro (um tipo ou outro)
+
+let user: string | null = null;
+user = "Alex";
+user = null;
+
