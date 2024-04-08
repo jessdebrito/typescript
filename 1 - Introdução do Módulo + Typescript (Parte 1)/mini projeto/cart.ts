@@ -29,5 +29,7 @@ addProduct("Computador", 3000, "Computador gamer");
 
 // Sempre que não quisermos que exista um return, podemos descrever como void
 function removeProduct(removingdId: number): void{
+    const index = productList.findIndex(product => product.id === removingdId)
 
+    productList.splice(index, 1);
 }
