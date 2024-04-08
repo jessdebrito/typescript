@@ -12,7 +12,7 @@ let id = 1; // Id serial
 
 //Parâmetros opcionais precisam ficar por último
 // Autocomplete ctrl+space
-function addProduct(name: string, price: number, description?: string): IProduct {
+function addProduct(name: string, price: number, description?: string): IProduct{
     const newProduct: IProduct = {
      id: id,
      name,
