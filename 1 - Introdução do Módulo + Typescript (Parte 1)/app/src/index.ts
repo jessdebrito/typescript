@@ -3,7 +3,7 @@ import { IProduct, IProductCreateData, IProductUpdateData } from "./interfaces/p
 
 let id = 1;
 
-function createProduct(data: IProductCreateData){
+function createProduct(data: IProductCreateData): IProduct{
     const now = new Date();
 
     const newProduct: IProduct = {
@@ -13,6 +13,8 @@ function createProduct(data: IProductCreateData){
     }
 
     productList.push(newProduct);
+
+    return newProduct;
 }
 
 function removeProduct(removingId: number){
@@ -26,7 +28,7 @@ function removeProduct(removingId: number){
     return "Product not found."
 }
 
-function updateProduct(updatingId: number, data: IProductUpdateData){
+function updateProduct(updatingId: number, data: IProductUpdateData): IProduct | string{
     const currentProduct = productList.find(product => product.id === updatingId);
 
     if(!currentProduct){
@@ -36,10 +38,17 @@ function updateProduct(updatingId: number, data: IProductUpdateData){
     const updateProduct = {
         ...currentProduct, ...data
     }
-    console.log(updateProduct)
+
+    const index = productList.findIndex(product => product.id === updatingId);
+
+    productList.splice(index, 1, updateProduct);
+    
+    return updateProduct;
+
 }
 
 createProduct({name:"Computador", price: 3000, description: "Computador gamer"});
-updateProduct(1,{ name: "Computador bonito!", price: 5000 })
+const update = updateProduct(1,{ name: "Computador bonito!", price: 5000 });
+console.log(update);
 const remove = removeProduct(1);
 if(remove) console.log(remove);
