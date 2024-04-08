@@ -12,7 +12,7 @@ let id = 1;
 
 //Parâmetros opcionais precisam ficar por último
 // Autocomplete ctrl+space
-function addProduct(name: string, price: number, description?: string){
+function addProduct(name: string, price: number, description?: string): IProduct {
     const newProduct: IProduct = {
      id: id,
      name,
