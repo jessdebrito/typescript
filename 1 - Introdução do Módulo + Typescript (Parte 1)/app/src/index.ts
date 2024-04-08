@@ -1,5 +1,5 @@
 import { productList } from "./database/database";
-import { IProduct, IProductCreateData } from "./interfaces/product.interface";
+import { IProduct, IProductCreateData, IProductUpdateData } from "./interfaces/product.interface";
 
 let id = 1;
 
@@ -17,10 +17,29 @@ function createProduct(data: IProductCreateData){
 
 function removeProduct(removingId: number){
     const index = productList.findIndex(product => product.id === removingId);
-    console.log(index);
+
+    if(index !== -1){
+        productList.splice(index, 1);
+        return;
+    }
+
+    return "Product not found."
 }
 
+function updateProduct(updatingId: number, data: IProductUpdateData){
+    const currentProduct = productList.find(product => product.id === updatingId);
+
+    if(!currentProduct){
+        return "Product not found."
+    }
+
+    const updateProduct = {
+        ...currentProduct, ...data
+    }
+    console.log(updateProduct)
+}
 
 createProduct({name:"Computador", price: 3000, description: "Computador gamer"});
-
-removeProduct(1);
+updateProduct(1,{ name: "Computador bonito!", price: 5000 })
+const remove = removeProduct(1);
+if(remove) console.log(remove);

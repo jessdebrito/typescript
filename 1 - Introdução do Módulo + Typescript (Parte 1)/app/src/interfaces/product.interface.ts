@@ -12,3 +12,9 @@ export interface IProductCreateData {
     price: number;
     description: string;
 }
+
+export interface IProductUpdateData{
+    name?: string;
+    price?: number;
+    description?: string;
+}
