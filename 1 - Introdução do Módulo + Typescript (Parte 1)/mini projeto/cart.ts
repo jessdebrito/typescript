@@ -8,7 +8,7 @@ interface IProduct{
 // nome do objeto + colchetes = lista
 const productList: IProduct[] = [];
 
-let id = 1;
+let id = 1; // Id serial
 
 //Parâmetros opcionais precisam ficar por último
 // Autocomplete ctrl+space
@@ -26,3 +26,8 @@ function addProduct(name: string, price: number, description?: string): IProduct
 
 addProduct("Computador", 3000);
 addProduct("Computador", 3000, "Computador gamer");
+
+// Sempre que não quisermos que exista um return, podemos descrever como void
+function removeProduct(removingdId: number): void{
+
+}
