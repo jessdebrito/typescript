@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "node dist/src/index.js",
+    "build":"npx tsc",
     "dev": "tsnd src/index.ts"
   },
   "keywords": [],
