@@ -21,6 +21,9 @@ function addProduct(name: string, price: number, description?: string): IProduct
     };
 
     productList.push(newProduct);
+
+    id++; // o próximo produto terá o id + 1 do anterior
+
     return newProduct;
 }
 
