@@ -86,7 +86,7 @@ class RecipeService{
         return newRecipe;
     }
 
-    remove(removingId: number){
+    remove(removingId: number): string{
         const index = this.recipeList.findIndex(recipe => recipe.id === removingId);
 
         if(index !== -1){
@@ -97,7 +97,7 @@ class RecipeService{
         return "Recipe not found."
     }
 
-    update(updatingId: number, data: TRecipeUpdateData){
+    update(updatingId: number, data: TRecipeUpdateData): IRecipe | string {
         const currentRecipe = this.recipeList.find(recipe => recipe.id === updatingId);
 
         if(!currentRecipe){
