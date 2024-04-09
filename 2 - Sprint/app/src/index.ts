@@ -118,3 +118,5 @@ class RecipeService{
 
     }
 }
+
+const recipeList = new RecipeService();
