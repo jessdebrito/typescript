@@ -3,7 +3,7 @@ export interface IRecipe{
     title: string;
     content: string;
     created_at: Date;
-    uppdated_at: Date;
+    uppdated_at?: Date;
 }
 
 // Type - instância de tipo - significa que consegue armazenar qualquer "tipo" existente no Typescript
@@ -30,4 +30,4 @@ sayUserRole
 
 // export type TRecipeCreateData = Omit<IRecipe, "id" | "created_at" | "updated_at">
 export type TRecipeCreateData = Pick<IRecipe, "title" | "content">;
-// export type TRecipeCreateData = Partial<TRecipeCreateData>;
+export type TRecipeUpdateData = Partial<TRecipeCreateData>;
