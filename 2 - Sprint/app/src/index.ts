@@ -3,6 +3,8 @@
 // Organização de código
 // JavaScript / Typescript
 
+import { IRecipe } from "./omitpickpartial";
+
 // Toda classe também inicie com uma letra maiúscula
 // PascalCase
 
@@ -54,3 +56,16 @@ class Person {
 // A classe aceita múltiplas instâncias
 const personA = new Person("Jéssica", 29);
 const personB = new Person("Alex", 33);
+
+
+class RecipeService{
+    // Caso o valor deva ser o mesmo em todas as instâncias, atribuir valor dentro da classe
+    recipeList: IRecipe[] = [];
+
+    //Método executado na inicialização da classe (instância)
+    constructor(recipeList: IRecipe[] = []){
+        this.recipeList = recipeList
+    }
+
+    
+}
