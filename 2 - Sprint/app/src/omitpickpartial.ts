@@ -26,7 +26,8 @@ sayUserRole
 ------------------------ */
 // Omit - permite interagir com uma interface e omitir chaves da mesma
 // Pick - Interagir com uma interface e "pegar" chaves da mesma
-// Partial -
+// Partial - Transformar todas as chaves de um objeto em opcionais
 
 // export type TRecipeCreateData = Omit<IRecipe, "id" | "created_at" | "updated_at">
 export type TRecipeCreateData = Pick<IRecipe, "title" | "content">;
+// export type TRecipeCreateData = Partial<TRecipeCreateData>;
