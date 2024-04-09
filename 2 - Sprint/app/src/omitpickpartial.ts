@@ -8,8 +8,24 @@ export interface IRecipe{
 
 // Type - instância de tipo - significa que consegue armazenar qualquer "tipo" existente no Typescript
 
+/* ---------------------------
 type TString = string;
 type TNumber = number;
 type TStringOrNumber = string | number;
 type TRecipe = IRecipe;
 type TUserRole = "USER" | "ADMIN" | "MODERADOR";
+------------------------ */
+
+// Omit / Pick / Partial - cria variação de tipo com base em uma interface
+
+/* ---------------------------
+function sayUserRole(role: TUserRole){
+    console.log(role);
+}
+sayUserRole 
+------------------------ */
+// Omit - permite interafir com uma interface e omitir chaves da mesma
+// Pick -
+// Partial -
+
+export type TRecipeCreateData = Omit<IRecipe, "id" | "created_at" | "updated_at">
