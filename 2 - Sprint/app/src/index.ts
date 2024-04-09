@@ -50,3 +50,7 @@ class Person {
         console.log(`Olá, meu nome é ${this.name}!`);
     }
 }
+
+// A classe aceita múltiplas instâncias
+const personA = new Person("Jéssica", 29);
+const personB = new Person("Alex", 33);
