@@ -58,17 +58,20 @@ const personA = new Person("Jéssica", 29);
 const personB = new Person("Alex", 33);
 
 
+
+// Níveis de acesso
+
 class RecipeService{
     // Caso o valor deva ser o mesmo em todas as instâncias, atribuir valor dentro da classe
-    recipeList: IRecipe[] = [];
-    id = 1; // id começa em 1
+    public recipeList: IRecipe[] = [];
+    private id = 1; // id começa em 1
 
     //Método executado na inicialização da classe (instância)
     constructor(recipeList: IRecipe[] = []){
         this.recipeList = recipeList;
     }
 
-    create(data: TRecipeCreateData){
+    public create(data: TRecipeCreateData){
         const now = new Date();
 
 
@@ -121,5 +124,3 @@ class RecipeService{
 }
 
 const recipeList = new RecipeService();
-
-// Níveis de acesso
